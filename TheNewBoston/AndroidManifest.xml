@@ -51,6 +51,16 @@
             android:label="Camera Application"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name=".Data"
+            android:label="Fun With Radio Buttons!"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".OpenedClass"
+            android:label="Fun With Radio Buttons!"
+            android:screenOrientation="portrait" >
+        </activity>
     </application>
 
 </manifest>
