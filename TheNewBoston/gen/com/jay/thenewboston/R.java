@@ -26,7 +26,8 @@ public final class R {
     }
     public static final class id {
         public static final int LinearLayout1=0x7f090000;
-        public static final int action_settings=0x7f09001e;
+        public static final int aboutUs=0x7f09001e;
+        public static final int action_settings=0x7f090020;
         public static final int analogClock1=0x7f09000b;
         public static final int bAdd=0x7f090002;
         public static final int bResults=0x7f09001b;
@@ -46,6 +47,7 @@ public final class R {
         public static final int etThings=0x7f090007;
         public static final int ibTakePic=0x7f090011;
         public static final int ivReturnedPic=0x7f090010;
+        public static final int preferences=0x7f09001f;
         public static final int rCrazy=0x7f090015;
         public static final int rHappy=0x7f090016;
         public static final int rSad=0x7f090017;
@@ -67,7 +69,8 @@ public final class R {
         public static final int text=0x7f030006;
     }
     public static final class menu {
-        public static final int starting_point=0x7f080000;
+        public static final int cool_menu=0x7f080000;
+        public static final int starting_point=0x7f080001;
     }
     public static final class raw {
         public static final int kliqsplashsound=0x7f040000;
