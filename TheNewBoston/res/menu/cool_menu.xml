@@ -13,5 +13,8 @@
         android:numericShortcut="2"
         android:alphabeticShortcut="s"
         />
-
+    <item 
+        android:title="Exit"
+        android:id="@+id/exit"
+		/>
 </menu>
