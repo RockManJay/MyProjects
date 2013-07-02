@@ -12,40 +12,81 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnTouchListener;
 
-public class GFXSurface extends Activity implements OnTouchListener{
+public class GFXSurface extends Activity implements OnTouchListener
+{
 	
 	MyBringBackSurface ourSurfaceView;
-	float x, y;
+	float x, y, sX, sY, fX, fY, dX, dY, aniX, aniY, scaledX, scaledY;
+	Bitmap test, plus;
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(Bundle savedInstanceState)
+	{
 		super.onCreate(savedInstanceState);
 		ourSurfaceView = new MyBringBackSurface(this);
 		ourSurfaceView.setOnTouchListener(this);
 		x = 0;
 		y = 0;
+		sX = 0;
+		sY = 0;
+		fX = 0;
+		fY = 0;
+		dX = dY = aniX = aniY = scaledX = scaledY = 0;
+		test = BitmapFactory.decodeResource(getResources(), R.drawable.greenball);
+		plus = BitmapFactory.decodeResource(getResources(), R.drawable.btncustom1);
 		setContentView(ourSurfaceView);
 	}
 
 	@Override
-	protected void onPause() {
+	protected void onPause()
+	{
 		super.onPause();
 		ourSurfaceView.pause();
 	}
 
 	@Override
-	protected void onResume() {
+	protected void onResume()
+	{
 		super.onResume();
 		ourSurfaceView.resume();
 	}
 
 	@Override
-	public boolean onTouch(View v, MotionEvent event) {
+	public boolean onTouch(View v, MotionEvent event)
+	{
+		try
+		{
+			Thread.sleep(50);
+		} catch (InterruptedException e)
+		{
+			e.printStackTrace();
+		}
+		
 		x = event.getX();
 		y = event.getY();
-		return false;
+		
+		switch(event.getAction())
+		{
+		case MotionEvent.ACTION_DOWN:
+			sX = event.getX();
+			sY = event.getY();
+			dX = dY = aniX = aniY = scaledX = scaledY = fX = fY = 0;
+			break;
+		case MotionEvent.ACTION_UP:
+			fX = event.getX();
+			fY = event.getY();
+			dX = fX - sX;
+			dY = fY - sY;
+			scaledX = dX / 30;
+			scaledY = dY / 30;
+			x = y = 0;
+			break;
+		}
+		
+		return true;
 	}
-	public class MyBringBackSurface extends SurfaceView implements Runnable{
+	public class MyBringBackSurface extends SurfaceView implements Runnable
+		{
 		
 		SurfaceHolder ourHolder;
 		Thread ourThread = null;
@@ -92,9 +133,20 @@ public class GFXSurface extends Activity implements OnTouchListener{
 				canvas.drawRGB(02, 02, 150);
 				if(x != 0 && y != 0)
 				{
-					Bitmap test = BitmapFactory.decodeResource(getResources(), R.drawable.greenball);
-					canvas.drawBitmap(test, x, y, null);
+					canvas.drawBitmap(test, x - (test.getWidth() / 2), y - (test.getHeight() / 2), null);
 				}
+				if(sX != 0 && sY != 0)
+				{
+					canvas.drawBitmap(plus, sX - (plus.getWidth() / 2), sY - (plus.getHeight() / 2), null);
+				}
+				if(fX != 0 && fY != 0)
+				{
+					canvas.drawBitmap(test, fX - (test.getWidth() / 2) - aniX, fY - (test.getHeight() / 2) - aniY, null);
+					canvas.drawBitmap(plus, fX - (plus.getWidth() / 2), fY - (plus.getHeight() / 2), null);
+				}
+				aniX = aniX + scaledX;
+				aniY = aniY + scaledY;
+				
 				ourHolder.unlockCanvasAndPost(canvas);
 			}
 			

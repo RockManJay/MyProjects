@@ -85,7 +85,9 @@ public final class R {
         public static final int starting_point=0x7f0a0001;
     }
     public static final class raw {
-        public static final int kliqsplashsound=0x7f050000;
+        public static final int backgroundmusic=0x7f050000;
+        public static final int explosion=0x7f050001;
+        public static final int kliqsplashsound=0x7f050002;
     }
     public static final class string {
         public static final int action_settings=0x7f080001;
