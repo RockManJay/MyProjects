@@ -25,49 +25,59 @@ public final class R {
         public static final int activity_vertical_margin=0x7f070001;
     }
     public static final class drawable {
-        public static final int btncustom1=0x7f020000;
-        public static final int btncustom2=0x7f020001;
-        public static final int btncustom3=0x7f020002;
-        public static final int custom=0x7f020003;
-        public static final int greenball=0x7f020004;
-        public static final int ic_launcher=0x7f020005;
-        public static final int jappsplash=0x7f020006;
+        public static final int arrow=0x7f020000;
+        public static final int btncustom1=0x7f020001;
+        public static final int btncustom2=0x7f020002;
+        public static final int btncustom3=0x7f020003;
+        public static final int custom=0x7f020004;
+        public static final int greenball=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int jappsplash=0x7f020007;
+        public static final int slidebutton=0x7f020008;
     }
     public static final class id {
+        public static final int Button1=0x7f0b001b;
+        public static final int Button2=0x7f0b001c;
+        public static final int Button3=0x7f0b001d;
+        public static final int Button4=0x7f0b001e;
         public static final int LinearLayout1=0x7f0b000d;
-        public static final int aboutUs=0x7f0b001f;
-        public static final int action_settings=0x7f0b0022;
+        public static final int aboutUs=0x7f0b0027;
+        public static final int action_settings=0x7f0b002a;
         public static final int analogClock1=0x7f0b0008;
         public static final int bAdd=0x7f0b000f;
-        public static final int bResults=0x7f0b001c;
+        public static final int bResults=0x7f0b0024;
         public static final int bReturn=0x7f0b0019;
         public static final int bSA=0x7f0b000a;
         public static final int bSAFR=0x7f0b000b;
         public static final int bSentEmail=0x7f0b0007;
         public static final int bSetWall=0x7f0b0013;
         public static final int bSub=0x7f0b0010;
+        public static final int cbSlidable=0x7f0b0022;
+        public static final int content=0x7f0b0020;
         public static final int etAction=0x7f0b0005;
-        public static final int etCommands=0x7f0b001b;
+        public static final int etCommands=0x7f0b0023;
         public static final int etEmails=0x7f0b0001;
         public static final int etIntro=0x7f0b0002;
         public static final int etName=0x7f0b0003;
         public static final int etOutro=0x7f0b0006;
         public static final int etSend=0x7f0b0009;
         public static final int etThings=0x7f0b0004;
-        public static final int exit=0x7f0b0021;
+        public static final int exit=0x7f0b0029;
+        public static final int handle=0x7f0b0021;
         public static final int ibTakePic=0x7f0b0012;
         public static final int ivReturnedPic=0x7f0b0011;
-        public static final int preferences=0x7f0b0020;
+        public static final int preferences=0x7f0b0028;
         public static final int rCrazy=0x7f0b0016;
         public static final int rHappy=0x7f0b0017;
         public static final int rSad=0x7f0b0018;
         public static final int rgAnswers=0x7f0b0015;
-        public static final int tbPassword=0x7f0b001d;
+        public static final int slidingD=0x7f0b001f;
+        public static final int tbPassword=0x7f0b0025;
         public static final int textView1=0x7f0b0000;
         public static final int tvDisplay=0x7f0b000e;
         public static final int tvGot=0x7f0b000c;
         public static final int tvQuestion=0x7f0b0014;
-        public static final int tvResults=0x7f0b001e;
+        public static final int tvResults=0x7f0b0026;
         public static final int tvTest=0x7f0b001a;
     }
     public static final class layout {
@@ -77,15 +87,18 @@ public final class R {
         public static final int main=0x7f030003;
         public static final int photo=0x7f030004;
         public static final int send=0x7f030005;
-        public static final int splash=0x7f030006;
-        public static final int text=0x7f030007;
+        public static final int sliding=0x7f030006;
+        public static final int splash=0x7f030007;
+        public static final int text=0x7f030008;
     }
     public static final class menu {
         public static final int cool_menu=0x7f0a0000;
         public static final int starting_point=0x7f0a0001;
     }
     public static final class raw {
-        public static final int kliqsplashsound=0x7f050000;
+        public static final int backgroundmusic=0x7f050000;
+        public static final int death=0x7f050001;
+        public static final int kliqsplashsound=0x7f050002;
     }
     public static final class string {
         public static final int action_settings=0x7f080001;
