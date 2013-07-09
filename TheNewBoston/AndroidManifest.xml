@@ -100,6 +100,14 @@
             android:label="@string/app_name" >
         </activity>
         <activity
+            android:name=".Flipper"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".SharedPrefs"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
             android:name=".OpenedClass"
             android:label="Fun With Radio Buttons!"
             android:screenOrientation="portrait" >
