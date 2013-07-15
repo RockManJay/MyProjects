@@ -1,6 +1,7 @@
 package com.jay.thenewboston;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -92,7 +93,37 @@ public class InternalData extends Activity implements OnClickListener
 			}
 			break;
 		case R.id.bLoad:
-
+			String collected = null;
+			FileInputStream fis = null;
+			try
+			{
+				fis = openFileInput(FILENAME);
+				byte[] dataArray = new byte[fis.available()];
+				while (fis.read(dataArray) != -1)
+				{
+					collected = new String(dataArray);
+				}
+			}
+			catch (FileNotFoundException e)
+			{
+				e.printStackTrace();
+			}
+			catch (IOException e)
+			{
+				e.printStackTrace();
+			}
+			finally
+			{
+				try
+				{
+					fis.close();
+					dataResults.setText(collected);
+				}
+				catch (IOException e)
+				{
+					e.printStackTrace();
+				}
+			}
 			break;
 		}
 	}
